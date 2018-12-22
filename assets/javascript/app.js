@@ -1,45 +1,59 @@
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyAbF3nKAaCZqR4M16UtQapLikADKBnGsPs",
-  authDomain: "upenn-project-1-2f463.firebaseapp.com",
-  databaseURL: "https://upenn-project-1-2f463.firebaseio.com",
-  projectId: "upenn-project-1-2f463",
-  storageBucket: "upenn-project-1-2f463.appspot.com",
-  messagingSenderId: "43611725747"
-};
+  // Initialize Firebase
+  // var config = {
+  //   apiKey: "AIzaSyAbF3nKAaCZqR4M16UtQapLikADKBnGsPs",
+  //   authDomain: "upenn-project-1-2f463.firebaseapp.com",
+  //   databaseURL: "https://upenn-project-1-2f463.firebaseio.com",
+  //   projectId: "upenn-project-1-2f463",
+  //   storageBucket: "upenn-project-1-2f463.appspot.com",
+  //   messagingSenderId: "43611725747"
+  // };
+  // firebase.initializeApp(config);
 
-firebase.initializeApp(config);
 
-//Retrieve News API on Search
-$("#searchButton").on("click", function (event) {
-  event.preventDefault();
-  $("#news").text("");
-  var input = $("#search-input").val();
-  var queryURL = "https://newsapi.org/v2/everything?q=" + input + '&apiKey=162726561a464b569d09046f2862e7f1';
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
+  $("#searchButton").on("click", function(event) {
+    event.preventDefault();
+    $("#news").text("");
+    var input = $("#playerSearch").val();
+    
+    var queryURL = "https://newsapi.org/v2/everything?q=" + input + '&apiKey=162726561a464b569d09046f2862e7f1';
+    
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function (response) {
+      
+      var result = response.articles;
+      
+      for (var i = 0; i < 10; i++) {
 
-    var result = response.articles;
+          // var titleDiv = $("<div>");
 
-    for (var i = 0; i < result.length; i++) {
-      // var titleDiv = $("<div>");
-      // var imgTag = $("<img>")
-      var aTag = $("<a>").text(result[i].title);
-      var pTag = $("<p>").text(result[i].content);
+          // var imgTag = $("<img>")
 
-      aTag.attr("href", result[i].url);
+          var trTag = $("<tr>");
 
-      $("#news").append(aTag)
-      $("#news").append(pTag)
+          var rowTag = $("<th>").text(i+1);
 
-      // console.log(result[i].title)
-      // console.log(result[i].content)
+          var titleTag = $("<td>").text(result[i].title);
+          var contentTag = $("<td>").text(result[i].content);
+          
+          titleTag.attr("href", result[i].url);
+          
+          // trTag.text(rowTag + titleTag + contentTag)
 
-    }
-    // console.log(queryURL)
+          $("tbody").append(trTag)
 
-  });
-});
+          $("tbody").append(rowTag)
+          $("tbody").append(titleTag)
+          $("tbody").append(contentTag)
+          
 
+          // console.log(result[i].title)
+          // console.log(result[i].content)
+          
+      }
+
+          // console.log(queryURL)
+            
+    });//end ajax
+  });//end onClick
