@@ -9,7 +9,7 @@
   // };
   // firebase.initializeApp(config);
 
-  
+
   $("#searchButton").on("click", function(event) {
     event.preventDefault();
     $("#news").text("");
@@ -32,7 +32,7 @@
 
           var trTag = $("<tr>");
 
-          var rowTag = $("<th>").text(i);
+          var rowTag = $("<th>").text(i+1);
 
           var titleTag = $("<td>").text(result[i].title);
           var contentTag = $("<td>").text(result[i].content);
