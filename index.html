@@ -23,7 +23,7 @@
   <!-- JQUERY CDN -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  
+
   <title>Project 1</title>
   <!-- OUR STYLES -->
   <link rel="stylesheet" href="assets/styles/styles.css">
@@ -38,14 +38,21 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/images/2066298.jpg" alt="First slide">
+        <img class="d-block w-100" src="assets/images/carousel/Ben-Simmons.jpg" alt="First slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/2066298.jpg" alt="Second slide">
+        <img class="d-block w-100" src="assets/images/carousel/joel-embiid.jpg" alt="Second slide">
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="assets/images/2066298.jpg" alt="Third slide">
+        <img class="d-block w-100" src="assets/images/carousel/butler.jpg" alt="Third slide">
       </div>
+
+      <form class="globalSearch">
+        <div class="form-group">
+          <input type="text" class="form-control" id="playerSearch" placeholder="Search Player">
+          <button type="submit" id="searchButton" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -55,54 +62,80 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+
+
+
   </div>
-  <form>
-    <div class="form-group">
-
-      <input type="text" class="form-control" id="playerSearch" placeholder="Search Player">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
 
 
-    <button type="submit" id = "searchButton" class="btn btn-primary">Submit</button>
+  <div class="nbaTeams">
 
-  </form>
-  <!-- <div class="container"> -->
-    <!-- <div class="row px-0"> -->
-      <img class="px-0 logos py-2" src="assets/images/logos/76er.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/AH.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/BC.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/BN.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/CB.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/CC.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/CH.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/DM.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/DN.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/DP.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/GSW.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/HR.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/IP.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/LAC.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/LAL.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/MB.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/MG.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/MH.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/MT.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/NOP.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/NYK.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/OKC.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/OM.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/PS.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/PTB.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/SAS.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/SK.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/TR.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/UJ.gif" alt="">
-      <img class="px-0 logos py-2" src="assets/images/logos/WW.gif" alt="">
+    <img class="logos img-thumbnail rounded-circle" data-color="#a71231" data-name="Toronto-Raptors" src="assets/images/logos/TR.gif"
+      alt="1">
+    <img class="logos img-thumbnail rounded-circle" data-color="#2f5238" data-name="Milwaukee-Bucks" src="assets/images/logos/MB.gif"
+      alt="2">
+    <img class="logos img-thumbnail rounded-circle" data-color="#2152ad" data-name="Philadelphia-76ers" src="assets/images/logos/76er.gif"
+      alt="3">
+    <img class="logos img-thumbnail rounded-circle" data-color="#fcba2e" data-name="Indiana-Pacers" src="assets/images/logos/IP.gif"
+      alt="4">
+    <img class="logos img-thumbnail rounded-circle" data-color="#077430" data-name="Boston-Celtics" src="assets/images/logos/BC.gif"
+      alt="5">
+    <img class="logos img-thumbnail rounded-circle" data-color="#96022c" data-name="Miami-Heat" src="assets/images/logos/MH.gif"
+      alt="6">
+    <img class="logos img-thumbnail rounded-circle" data-color="#04758b" data-name="Charlotte-Hornets" src="assets/images/logos/CH.gif"
+      alt="7">
+    <img class="logos img-thumbnail rounded-circle" data-color="#d6093c" data-name="Detroit-Pistons" src="assets/images/logos/DP.gif"
+      alt="8">
+    <img class="logos img-thumbnail rounded-circle" data-color="#2c2a24" data-name="Brooklyn-Nets" src="assets/images/logos/BN.gif"
+      alt="9">
+    <img class="logos img-thumbnail rounded-circle" data-color="#0574bc" data-name="Orlando-Magic" src="assets/images/logos/OM.gif"
+      alt="10">
+    <img class="logos img-thumbnail rounded-circle" data-color="#042244" data-name="Washington-Wizards" src="assets/images/logos/WW.gif"
+      alt="11">
+    <img class="logos img-thumbnail rounded-circle" data-color="#cc0a2e" data-name="Atlanta-Hawks" src="assets/images/logos/AH.gif"
+      alt="12">
+    <img class="logos img-thumbnail rounded-circle" data-color="#bc032c" data-name="Chicago-Bulls" src="assets/images/logos/CB.gif"
+      alt="13">
+    <img class="logos img-thumbnail rounded-circle" data-color="#f4822c" data-name="NY-Knicks" src="assets/images/logos/NYK.gif"
+      alt="14">
+    <img class="logos img-thumbnail rounded-circle" data-color="#c39326" data-name="Cleveland-Cavaliers" src="assets/images/logos/CC.gif"
+      alt="15">
+  </div>
 
-    <!-- </div> -->
+  <div class="nbaTeams">
 
-  <!-- </div> -->
+    <img class="logos img-thumbnail rounded-circle" data-color="#fbc82d" data-name="Golden-State-Warriors" src="assets/images/logos/GSW.gif"
+      alt="1">
+    <img class="logos img-thumbnail rounded-circle" data-color="#2d533a" data-name="Denver-Nuggets" src="assets/images/logos/UJ.gif"
+      alt="2">
+    <img class="logos img-thumbnail rounded-circle" data-color="#0472cc" data-name="OKC-Thunder" src="assets/images/logos/OKC.gif"
+      alt="3">
+    <img class="logos img-thumbnail rounded-circle" data-color="#d61443" data-name="LA-Clippers" src="assets/images/logos/LAC.gif"
+      alt="4">
+    <img class="logos img-thumbnail rounded-circle" data-color="#c81845" data-name="Houston-Rockets" src="assets/images/logos/HR.gif"
+      alt="5">
+    <img class="logos img-thumbnail rounded-circle" data-color="#fcaf35" data-name="LA-Lakers" src="assets/images/logos/LAL.gif"
+      alt="6">
+    <img class="logos img-thumbnail rounded-circle" data-color="#96022c" data-name="Portland-Trail-Blazers" src="assets/images/logos/PTB.gif"
+      alt="7">
+    <img class="logos img-thumbnail rounded-circle" data-color="#502d80" data-name="Sacramento-Kings" src="assets/images/logos/SK.gif"
+      alt="8">
+    <img class="logos img-thumbnail rounded-circle" data-color="#bbc5ca" data-name="San-Antonio-Spurs" src="assets/images/logos/SAS.gif"
+      alt="9">
+    <img class="logos img-thumbnail rounded-circle" data-color="#7c9ac1" data-name="Memphis-Grizzlies" src="assets/images/logos/MG.gif"
+      alt="10">
+    <img class="logos img-thumbnail rounded-circle" data-color="#0462ad" data-name="Dallas-Mavericks" src="assets/images/logos/DM.gif"
+      alt="11">
+    <img class="logos img-thumbnail rounded-circle" data-color="#eebb26" data-name="Denver-Nuggets" src="assets/images/logos/DN.gif"
+      alt="12">
+    <img class="logos img-thumbnail rounded-circle" data-color="#bb975c" data-name="New-Orleans-Pelicans" src="assets/images/logos/NOP.gif"
+      alt="13">
+    <img class="logos img-thumbnail rounded-circle" data-color="#035184" data-name="Minnesota-Timberwolves" src="assets/images/logos/MT.gif"
+      alt="14">
+    <img class="logos img-thumbnail rounded-circle" data-color="#f29a1d" data-name="Phoenix-Suns" src="assets/images/logos/PS.gif"
+      alt="15">
+  </div>
+
   <table class="table table-dark">
     <thead>
       <tr>
@@ -120,4 +153,5 @@
 </body>
 
 <script src="assets/javascript/app.js"></script>
+
 </html>
