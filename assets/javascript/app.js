@@ -29,11 +29,20 @@ function newsApi(input){
 
     for (var i = 0; i < 10; i++) {
       var trTag = $("<tr>");
-      var rowTag = $("<th>").text(i + 1);
+      var rowTag = $("<td>");
       var titleTag = $("<td>").text(result[i].title);
-      var contentTag = $("<td>").text(result[i].content);
+      var content = $("<a>").attr({"href": result[i].url, "target": "_blank", class : "newsContent"});
+      var contentTag = $("<td>");
+      var imgTag = $("<img>").attr({"src": result[i].urlToImage, "class": "ImageStlying"});
+      
+      // var imgTag = $("img").attr("src",result[i].urlToImage);
+      // var spanTag = $("span").append(imgTag);
 
-      titleTag.attr("href", result[i].url);
+
+      content.text(result[i].content);
+      // content.append(spanTag)
+      rowTag.append(imgTag);
+      contentTag.append(content);
 
       $("tbody").append(trTag)
       $("tbody").append(rowTag)

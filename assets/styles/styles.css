@@ -34,3 +34,22 @@
 #playerSearch {
     border-radius: 50px 50px 50px 50px;
 }
+
+.newsContent {
+    color: white;
+    text-decoration: none;
+  }
+
+.newsContent:hover {
+    color: rgb(163, 163, 177);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+.ImageStlying
+{
+  height: 100px;
+  margin-right:10px; 
+  
+}
+ 
