@@ -44,7 +44,7 @@ database.ref().on("value", function (snapshot) {
     //      $("#comment-display").prepend(comment);
     //     }
     // };
-
+    $('#comment-display').empty();
     snapshot.forEach(function(childSnapshot) {
         console.log(childSnapshot.val())
         var comment = childSnapshot.val().comment;
