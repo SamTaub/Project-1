@@ -11,7 +11,7 @@ $("#searchButton").on("click", function (event) {
   newsApi(input);
   tmApi(input);
   $(".ticketmaster").hide();
-  $(".newsroom").removeClass("col-9");
+  // $(".newsroom").removeClass("col-9");
   $("#playerSearch").val("");
   }
 });
@@ -20,11 +20,11 @@ $("#searchButton").on("click", function (event) {
 $(document).on("click", ".logos", function () {
   $("tbody").empty();
   var input = $(this).attr("data-name");
-  $(".newsroom").addClass("col-9");
+  // $(".newsroom").addClass("col-9");
   $(".ticketmaster").show();
   newsApi(input);
-  $("#tmTable").css("background-color", $(this).attr("data-color"));
   tmApi(input);
+  // $("button").css("background-color", $(this).attr("data-color"));
 });
 
 // This function grabs news API after taking in a input
@@ -76,12 +76,15 @@ function tmApi(input){
     var result = response._embedded;
     // console.log(response);
     for (var i = 0; i < 10; i++) {
-      var trTag = $("<tr>");
-      var titleTag = $("<td>").text(result.events[i].name);
-      var ticketTag = $("<td>").html('<a target="_blank" href="'+ result.events[i].url +'"><i class="fas fa-5x fa-ticket-alt"></i></a>');
+      var button = $("<button>").addClass("buynow");
+      // var button = $("<button>").css("background-color", "#042244");
+      button.text(result.events[i].name);
+      var ticketTag = $("<td>").html('<a target="_blank" href="'+ result.events[i].url +'"><i class="fas fa-5x fa-ticket-alt tmargin"></i></a>');
+      // ticketTag.addClass("text-center");
       // console.log(result.events[i]);
-      trTag.append(titleTag, ticketTag);
-      $("#tmTable").append(trTag);
+      button.append(ticketTag);
+      $("#tmaster").append(button);
+      
     }
   });
 }
