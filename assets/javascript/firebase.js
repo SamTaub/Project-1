@@ -15,7 +15,9 @@ var database = firebase.database();
 $('#comment').on("click", function(){
 
     event.preventDefault();
-
+    if($('#user-comment').val() === ""){
+        return;
+    } else {
     var comment = $('#user-comment').val().trim();
 
     var displayComment = {
@@ -25,7 +27,7 @@ $('#comment').on("click", function(){
     database.ref().push(displayComment);
 
     $("#user-comment").val('');
-
+}
 });
 
 database.ref().on("value", function (snapshot) {
@@ -48,7 +50,7 @@ database.ref().on("value", function (snapshot) {
     snapshot.forEach(function(childSnapshot) {
         console.log(childSnapshot.val())
         var comment = childSnapshot.val().comment;
-        var commentSpan = $('<p>' + comment + '</p>')
+        var commentSpan = $('<p>' + 'anonymous: ' + comment + '</p>')
         $("#comment-display").prepend(commentSpan);
     })
 
