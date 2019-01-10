@@ -31,8 +31,16 @@
     display: none;
 }
 
+#carouselExampleIndicators{
+    position: relative;
+}
+
 #playerSearch {
+    position: absolute;
     border-radius: 50px 50px 50px 50px;
+    bottom: 20%;
+    right: -200px;
+    width: 400px;
 }
 
 .newsContent {
@@ -53,3 +61,15 @@
   
 }
  
+.comment-table{
+    height: 300px;
+    overflow: scroll;
+}
+#user-comment{
+    float: left;
+    margin-right: 5px; 
+    width: 68%;
+}
+.btn-comment{
+    font-size: 12px;
+}

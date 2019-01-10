@@ -3,6 +3,9 @@
 // search news api when player is typed in search bar
 $("#searchButton").on("click", function (event) {
   event.preventDefault();
+  if($("#playerSearch").val() === ""){
+    return;
+  } else {
   $("tbody").empty();
   var input = $("#playerSearch").val();
   newsApi(input);
@@ -10,6 +13,7 @@ $("#searchButton").on("click", function (event) {
   $(".ticketmaster").hide();
   $(".newsroom").removeClass("col-9");
   $("#playerSearch").val("");
+  }
 });
 
 // search news and ticket master api when team logo is clicked
@@ -19,6 +23,7 @@ $(document).on("click", ".logos", function () {
   $(".newsroom").addClass("col-9");
   $(".ticketmaster").show();
   newsApi(input);
+  $("#tmTable").css("background-color", $(this).attr("data-color"));
   tmApi(input);
 });
 

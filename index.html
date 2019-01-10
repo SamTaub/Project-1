@@ -53,7 +53,7 @@
           </div>
 
           <form class="globalSearch">
-            <div class="form-group">
+            <div class="form-group d-flex justify-content-center">
               <input type="text" class="form-control" id="playerSearch" placeholder="Search Player">
               <button type="submit" id="searchButton" class="btn btn-primary">Submit</button>
             </div>
@@ -73,16 +73,14 @@
       </div>
     </div>
 
-    <div class="col-3 bg-dark text-white">
-
+    <div class="col-3 bg-dark text-white ">
       <div>
-        <button type="button" class="btn btn-primary" id="sign-in" onclick="location.href='login.html'">Sign In</button>
-        <button type="button" class="btn btn-primary" id="comment">Comment</button>
         <br>
-        <input type="text" name="comment" id="user-comment">
+        <input type="text" name="comment" id="user-comment" requierd>
+        <button type="button" class="btn btn-comment" id="comment">Comment</button>
+        
       </div>
-
-      <div id="comment-display">
+      <div id="comment-display" class="comment-table">
       </div>
     </div>
   </div>
@@ -189,6 +187,7 @@
 </body>
 
 <script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/login.js"></script>
 <script src="assets/javascript/firebase.js"></script>
 
 </html>
