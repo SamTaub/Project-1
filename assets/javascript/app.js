@@ -1,5 +1,4 @@
 
-
 // search news api when player is typed in search bar
 $("#searchButton").on("click", function (event) {
   event.preventDefault();
@@ -11,7 +10,6 @@ $("#searchButton").on("click", function (event) {
   newsApi(input);
   tmApi(input);
   $(".ticketmaster").hide();
-  // $(".newsroom").removeClass("col-9");
   $("#playerSearch").val("");
   }
 });
@@ -19,12 +17,11 @@ $("#searchButton").on("click", function (event) {
 // search news and ticket master api when team logo is clicked
 $(document).on("click", ".logos", function () {
   $("tbody").empty();
+  $("#tmaster").empty();
   var input = $(this).attr("data-name");
-  // $(".newsroom").addClass("col-9");
   $(".ticketmaster").show();
   newsApi(input);
   tmApi(input);
-  // $("button").css("background-color", $(this).attr("data-color"));
 });
 
 // This function grabs news API after taking in a input
@@ -46,12 +43,8 @@ function newsApi(input){
       var contentTag = $("<td>");
       var imgTag = $("<img>").attr({"src": result[i].urlToImage, "class": "ImageStlying"});
       
-      // var imgTag = $("img").attr("src",result[i].urlToImage);
-      // var spanTag = $("span").append(imgTag);
-
-
       content.text(result[i].content);
-      // content.append(spanTag)
+      
       rowTag.append(imgTag);
       contentTag.append(content);
 
@@ -77,10 +70,8 @@ function tmApi(input){
     // console.log(response);
     for (var i = 0; i < 10; i++) {
       var button = $("<button>").addClass("buynow");
-      // var button = $("<button>").css("background-color", "#042244");
       button.text(result.events[i].name);
       var ticketTag = $("<td>").html('<a target="_blank" href="'+ result.events[i].url +'"><i class="fas fa-5x fa-ticket-alt tmargin"></i></a>');
-      // ticketTag.addClass("text-center");
       // console.log(result.events[i]);
       button.append(ticketTag);
       $("#tmaster").append(button);
@@ -102,8 +93,23 @@ $(".logos").mouseover(function () {
 setInterval(function(){
   $(".logos").css("transition", "ease 10s")
   $(".logos").css("transform", "translate(-770px, 0px)")
+  $(".buynow").css("transition", "ease 10s")
+  $(".buynow").css("transform", "translate(-770px, 0px)")
 }, 10000)
 setInterval(function(){
   $(".logos").css("transition", "ease 10s")
   $(".logos").css("transform", "translate(30px, 0px)")
+  $(".buynow").css("transition", "ease 10s")
+  $(".buynow").css("transform", "translate(30px, 0px)")
 }, 20000)
+
+jQuery(document).ready(function() {
+  jQuery("time.timeago").timeago();
+});
+
+// console.log(jQuery.timeago(new Date()) );
+
+// setInterval(e=>{console.log(jQuery.timeago(new Date()))},5000
+// );
+
+
