@@ -63,7 +63,7 @@
  
 .comment-table{
     height: 300px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 #user-comment{
     float: left;
@@ -81,4 +81,8 @@
 
 .tmargin{
     margin-left: 100%;
+}
+
+.timeago{
+    color: darkred;
 }
