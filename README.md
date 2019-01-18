@@ -23,3 +23,5 @@ Sai Cheong Kuk: Site Design, CSS, API Integration
 ## Future Updates
 
 Future versions of this application are intended to include more API integration (YouTube, Twitter, Instagram, Sports Statistics), enhanced user interaction (Discussion Board), and enhancements to the UI/UX.
+
+https://samtaub.github.io/Project-1/
