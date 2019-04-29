@@ -1,27 +1,68 @@
 # NBA Player and Team Search
 
+![Picture of Homepage](/assets/images/readmepreview1.png)
+
+# Description
+
 The NBA Player and Team Search can be used to search for current news about NBA Players and Teams.  It can also be used to find tickets to upcoming games for your favorite teams.  The site includes a simple sign in option where you can engage with other fans in a comment section at the top of the page.
 
-## Use
+[Deployed Link](https://samtaub.github.io/Project-1/)
 
-To search for a player or team enter a term into the search box, located in the middle of the screen.  The page will load news results in the table below the NBA team logos.  To search for tickets and for news about an NBA team, click the logo of a team.  Ticket results will display below the team logos.  News will populate in the news table.
+## Instructions
 
-To engage with other users, click "Sign in" to enter a name.  You can comment using the comment box on the top right of the page.  The comment will display the time since the comment has been posted along with the users name if they sign in.
+* Search
+ * Use the search box in the middle of page to search for a player or team of your interest
+ * Click on a team's logo to get news and ticket information
+    * Note: Ticket information will only appear during the regular season and for teams who are participating in the postseason at the time of the search.  Ticket information appears between the news table and the team logo banners.
 
-## Technologies Used
+* Commenting
+ * Click "Sign-in" to choose a username
+ * Enter your comments in the input field and press "comment" to post your comment.
 
-HTML, CSS, JavaScript, Bootstrap, JQuery, Firebase, Ticketmaster API, News API, tinyAgo.js, timeago.js
+![Image of News Table](/assets/images/readmepreview2.png)
 
-## Contributions
+## Technologies
 
-Ronald Glover:  Site Design, BootStrap integration, API integration, tinyAgo.js, timeago.js
-
-Sam Taub:  Site Design, Firebase Integration, API Integration
-
-Sai Cheong Kuk: Site Design, CSS, API Integration
+* HTML5
+* CSS3
+* Bootstrap
+* JavaScript
+* jQuery
+* Firebase
+* Ticketmaster API
+* News API
+* tinyAgo.js
+* timeago.js
 
 ## Future Updates
 
-Future versions of this application are intended to include more API integration (YouTube, Twitter, Instagram, Sports Statistics), enhanced user interaction (Discussion Board), and enhancements to the UI/UX.
+* Include more API Integration to provide additional information to users
+ * YouTube
+ * Twitter
+ * Instagram
+ * Sports Statistics
+* User Disucssion Board
+* UI/UX Enhancements
 
-https://samtaub.github.io/Project-1/
+## About
+
+NBA Player and Team search was made as part of a group project during the Unviersity of Pennsylvania LPS Coding Bootcamp.  It's authors are:
+
+[Ronald Glover](https://github.com/ron881212)  
+
+* Site Design 
+* BootStrap integration 
+* API integration
+
+[Sam Taub](https://github.com/SamTaub) 
+
+* Site Design 
+* Firebase Integration 
+* API Integration
+
+[Sai Cheong Kuk](https://github.com/saikuk)
+
+* Site Design 
+* CSS 
+* API Integration
+
